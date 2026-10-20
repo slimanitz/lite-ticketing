@@ -19,11 +19,16 @@ Backlog (0)     │ Todo (3)          │ In progress (1)     │ Review (0)   �
 
 ## Install
 
+Install straight from GitHub (it builds on install, no registry needed):
+
 ```sh
-npm install -g lite-ticketing      # gives you `tk` and `lite-ticketing`
+npm install -g github:slimanitz/lite-ticketing   # gives you `tk` and `lite-ticketing`
+tk skill install                                 # optional: teach Claude Code the workflow
 # or run without installing
-npx lite-ticketing --help
+npx github:slimanitz/lite-ticketing --help
 ```
+
+Pin a version with `github:slimanitz/lite-ticketing#v0.1.0`. To work from a clone instead: `git clone https://github.com/slimanitz/lite-ticketing && cd lite-ticketing && npm install && npm link`.
 
 Requires Node 22.13 or newer.
 

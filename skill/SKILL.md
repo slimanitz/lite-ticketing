@@ -7,7 +7,7 @@ description: Track coding work on a local SQLite kanban with the `tk` CLI. Use a
 
 `tk` is a zero-dependency CLI that keeps a kanban board in `.tickets/tickets.db` at the repo root. The database is shared by every git worktree of the repo, so parallel agents see the same board. Every command accepts `--json` for parsing; prefer it whenever you read output programmatically.
 
-Run `tk --help` for the full reference. If `tk` is not on PATH, use `npx lite-ticketing`.
+Run `tk --help` for the full reference. If `tk` is not on PATH, use `npx github:slimanitz/lite-ticketing`.
 
 ## Session start
 
