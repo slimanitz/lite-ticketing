@@ -1,0 +1,35 @@
+import type { Store } from './store.js';
+import { type EventRow, type MilestoneRow, type Status, type Ticket } from './types.js';
+export declare const bold: (s: string) => string;
+export declare const dim: (s: string) => string;
+export declare const green: (s: string) => string;
+export declare const yellow: (s: string) => string;
+export declare const red: (s: string) => string;
+export declare const cyan: (s: string) => string;
+export declare const magenta: (s: string) => string;
+export declare const STATUS_GLYPH: Record<Status, string>;
+export declare const STATUS_LABEL: Record<Status, string>;
+export declare function colorStatus(s: Status): string;
+export declare function colorPriority(p: number): string;
+export declare function truncate(s: string, n: number): string;
+export declare function visibleLength(s: string): number;
+export declare function table(headers: string[], rows: string[][]): string;
+export declare function termWidth(): number;
+export declare function ticketJson(t: Ticket, store?: Store): Record<string, unknown>;
+export declare function milestoneJson(m: MilestoneRow, store: Store): Record<string, unknown>;
+export declare function eventJson(e: EventRow): Record<string, unknown>;
+export declare function renderTicketList(tickets: Ticket[], store: Store): string;
+export declare function renderTicket(t: Ticket, store: Store): string;
+export declare function renderEvent(e: EventRow): string;
+export declare function renderBoard(store: Store, opts?: {
+    doneLimit?: number;
+    milestone?: number;
+}): string;
+export declare function progressBar(done: number, total: number, width?: number): string;
+export declare function renderRoadmap(store: Store, opts?: {
+    includeDone?: boolean;
+    showTickets?: boolean;
+}): string;
+export declare function exportMarkdown(store: Store): string;
+export declare function exportJson(store: Store): Record<string, unknown>;
+export declare const ALL_STATUSES: readonly ["backlog", "todo", "in_progress", "review", "done", "cancelled"];

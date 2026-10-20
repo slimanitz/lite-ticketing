@@ -1,6 +1,6 @@
 {
   "name": "lite-ticketing",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tiny SQLite-backed kanban for coding agents: tickets, branches, status, roadmap. Zero dependencies.",
   "license": "MIT",
   "author": "slimanitz",
@@ -33,7 +33,6 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "prepare": "npm run build",
     "clean": "rm -rf dist",
     "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
     "prepublishOnly": "npm run clean && npm run build"

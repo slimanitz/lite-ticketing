@@ -38,7 +38,7 @@ import {
 import { Store } from './store.js';
 import { BRANCH_PREFIX, PRIORITIES, STATUSES, TYPES, UserError, type ListFilter, type Status, type Ticket } from './types.js';
 
-const VERSION = '0.1.0';
+const VERSION = '0.1.1';
 
 const BOOLEANS = [
   'json', 'help', 'version', 'all', 'blocked', 'force', 'checkout', 'claim', 'dry-run', 'gitignore',

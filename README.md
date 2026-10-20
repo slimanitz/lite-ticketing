@@ -19,7 +19,7 @@ Backlog (0)     │ Todo (3)          │ In progress (1)     │ Review (0)   �
 
 ## Install
 
-Install straight from GitHub (it builds on install, no registry needed):
+Install straight from GitHub (the compiled `dist/src` is committed, so no build step and no registry needed):
 
 ```sh
 npm install -g github:slimanitz/lite-ticketing   # gives you `tk` and `lite-ticketing`
@@ -28,7 +28,7 @@ tk skill install                                 # optional: teach Claude Code t
 npx github:slimanitz/lite-ticketing --help
 ```
 
-Pin a version with `github:slimanitz/lite-ticketing#v0.1.0`. To work from a clone instead: `git clone https://github.com/slimanitz/lite-ticketing && cd lite-ticketing && npm install && npm link`.
+Pin a version with `github:slimanitz/lite-ticketing#v0.1.1`. To work from a clone instead: `git clone https://github.com/slimanitz/lite-ticketing && cd lite-ticketing && npm install && npm link`.
 
 Requires Node 22.13 or newer.
 
@@ -109,6 +109,8 @@ console.log(store.next());
 npm install
 npm test          # builds with tsc, runs node --test
 ```
+
+`dist/src` is committed so `npm install -g github:slimanitz/lite-ticketing` works without a build. Commit it together with your source changes; CI fails if it is out of date.
 
 Layout: `src/db.ts` (schema, path resolution), `src/store.ts` (all queries and rules), `src/commands.ts` (CLI), `src/render.ts` (tables, board, roadmap, exports), `src/git.ts` (git helpers), `skill/SKILL.md` (Claude Code skill).
 
