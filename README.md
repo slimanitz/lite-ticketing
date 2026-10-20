@@ -19,16 +19,16 @@ Backlog (0)     │ Todo (3)          │ In progress (1)     │ Review (0)   �
 
 ## Install
 
-Install straight from GitHub (the compiled `dist/src` is committed, so no build step and no registry needed):
+Install straight from a GitHub release tarball (the compiled `dist/src` is committed, so no build step and no registry needed):
 
 ```sh
-npm install -g github:slimanitz/lite-ticketing   # gives you `tk` and `lite-ticketing`
-tk skill install                                 # optional: teach Claude Code the workflow
+npm install -g https://github.com/slimanitz/lite-ticketing/archive/refs/tags/v0.1.1.tar.gz   # gives you `tk`
+tk skill install                                  # optional: teach Claude Code the workflow
 # or run without installing
-npx github:slimanitz/lite-ticketing --help
+npx https://github.com/slimanitz/lite-ticketing/archive/refs/heads/main.tar.gz --help
 ```
 
-Pin a version with `github:slimanitz/lite-ticketing#v0.1.1`. To work from a clone instead: `git clone https://github.com/slimanitz/lite-ticketing && cd lite-ticketing && npm install && npm link`.
+Use `refs/heads/main.tar.gz` for the latest unreleased code. Prefer the tarball URL over `npm install -g github:slimanitz/lite-ticketing`: npm 10 installs global git dependencies as a link to a temporary clone that it then deletes. To work from a clone instead: `git clone https://github.com/slimanitz/lite-ticketing && cd lite-ticketing && npm install && npm link`.
 
 Requires Node 22.13 or newer.
 
