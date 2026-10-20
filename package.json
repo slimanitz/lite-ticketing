@@ -1,0 +1,54 @@
+{
+  "name": "lite-ticketing",
+  "version": "0.1.0",
+  "description": "A tiny SQLite-backed kanban for coding agents: tickets, branches, status, roadmap. Zero dependencies.",
+  "license": "MIT",
+  "author": "slimanitz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slimanitz/lite-ticketing.git"
+  },
+  "homepage": "https://github.com/slimanitz/lite-ticketing#readme",
+  "bugs": {
+    "url": "https://github.com/slimanitz/lite-ticketing/issues"
+  },
+  "type": "module",
+  "bin": {
+    "tk": "dist/src/cli.js",
+    "lite-ticketing": "dist/src/cli.js"
+  },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": "./dist/src/index.js"
+  },
+  "files": [
+    "dist/src",
+    "skill",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "kanban",
+    "tickets",
+    "sqlite",
+    "cli",
+    "agents",
+    "claude-code",
+    "roadmap",
+    "git"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
